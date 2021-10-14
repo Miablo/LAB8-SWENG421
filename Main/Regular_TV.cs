@@ -6,16 +6,24 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    public class Regular_TV : AbsTV
+    public class Regular_TV
     {
         // MSRP
         private int price = 200;
+        private string type = "Regular TV";
 
-        // sest price
-        public void setPrice(int p)
+        // set price
+
+        internal int getPrice()
         {
-            this.price = p;
+            return price;
         }
-        
+
+       internal string getType()
+        {
+            return type;
+        }
+
+
     }
 }

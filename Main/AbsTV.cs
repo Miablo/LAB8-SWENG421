@@ -6,46 +6,28 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    public class AbsTV : TV_IF
+    class AbsTV : TV_IF
     {
-        string type;
-        double powerWatt;
-        int price;
+        private int price;
+
         public void getInfo()
         {
-            Console.WriteLine("Power Wattage:\n " + getPowerUsage());
-            Console.WriteLine("Price:\n " + getPrice());
-            Console.WriteLine("Type:\n " + getType());
+            throw new NotImplementedException();
         }
 
-        double getPowerUsage()
-        {
-            return powerWatt;
-        }
-
-        int getPrice()
+        public int getPrice()
         {
             return price;
         }
 
-        string getType()
+        public string getType()
         {
-            return type;
+            throw new NotImplementedException();
         }
 
-        void setPowerUsage(double wattage)
-        {
-            this.powerWatt = wattage;
-        }
-
-        void setPrice(int price)
+        internal void setPrice(int price)
         {
             this.price = price;
-        }
-
-        void setType(string type)
-        {
-            this.type = type;
         }
     }
 }

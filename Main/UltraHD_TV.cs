@@ -9,7 +9,10 @@ namespace Main
     public class UltraHD_TV : Regular_TV
     {
        public  UltraHD_TV uHD;
-        private int price = 400;
+       private int price = 400;
+        private string type = "UltraHD TV";
+
+       
 
     }
 }

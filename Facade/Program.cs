@@ -6,7 +6,11 @@ namespace Facade
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int budget;
+            Console.WriteLine("Enter your TV Budget: ");
+            budget = Int32.Parse(Console.ReadLine());
+            Retailer store = new Retailer(budget);
+            store.replenishTV();
         }
     }
 }
