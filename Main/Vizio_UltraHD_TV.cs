@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace Main
 {
     class Vizio_UltraHD_TV : Vizio_TV, UltraHDIF
@@ -7,12 +8,9 @@ namespace Main
         public Vizio_UltraHD_TV()
         {
             setPrice(450);
-            setType("Ultra");
-            getBrand();
+            
+            setType("Ultra"); 
         }
-
-        // MSRP 450
-        
 
     }
 }

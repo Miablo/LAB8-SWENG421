@@ -13,9 +13,8 @@ namespace Main
         public Sony_TV()
         {
             setPrice(280);
-            setType("Regular");
             Console.WriteLine("Brand: " + getBrand());
-
+            setType("Regular");
         }
 
     }

@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace Main
 {
     public class TVProxy : AbsTVGlobal

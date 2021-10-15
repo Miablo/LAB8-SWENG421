@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Main
 {
@@ -18,9 +14,9 @@ namespace Main
         public Sony_Smart_TV()
         {
             setPrice(380);
-            getBrand();
+            
             setType("Smart");
-            getPowerUsage();
+            Console.WriteLine("Power Usage: " + getPowerUsage());
         }
 
 

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Main
 {
@@ -13,8 +9,7 @@ namespace Main
         public Sony_UltraHD_TV()
         {
             setPrice(480);
-            setType("Ultra");
-            getBrand();
+            setType("Ultra");  
         }
         
     }

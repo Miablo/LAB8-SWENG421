@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Main
 {
@@ -12,9 +8,9 @@ namespace Main
 
         public Vizio_TV()
         {
+            Console.WriteLine("Brand: " + getBrand());
             setType("Regular");
             setPrice(250);
-            Console.WriteLine("Brand: " + getBrand());
         }
      
         public string getBrand()

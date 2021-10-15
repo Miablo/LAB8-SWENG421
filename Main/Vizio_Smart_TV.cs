@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace Main
 {
     class Vizio_Smart_TV : Vizio_TV, SmartIF
@@ -14,9 +15,9 @@ namespace Main
         public Vizio_Smart_TV()
         {
             setPrice(350);
+            
             setType("Smart");
-            getBrand();
-            getPowerUsage();
+            Console.WriteLine("Power Usage: " + getPowerUsage());
         }
     }
 }
