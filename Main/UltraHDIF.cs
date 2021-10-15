@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    interface UltraHDIF
+    public interface UltraHDIF : TV_IF
     {
-        public void getInfo();
-        public int getPrice();
-        public String getType();
+    
     }
 }

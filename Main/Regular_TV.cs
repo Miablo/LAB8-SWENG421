@@ -8,21 +8,40 @@ namespace Main
 {
     public class Regular_TV
     {
+       
         // MSRP
         private int price = 200;
-        private string type = "Regular TV";
-
+        private string type = "Regular";
+ 
         // set price
+        internal void setPrice(int price)
+        {
+            this.price = price;
+        }
 
-        internal int getPrice()
+        public string getType()
+        {
+            return type;
+        }
+
+        public int getPrice()
         {
             return price;
         }
 
-       internal string getType()
+        public void getInfo()
         {
-            return type;
+            Console.WriteLine("\n");
+            Console.WriteLine("Price: " + getPrice());
+            Console.WriteLine("This is from Regular TV\n");
+            Console.WriteLine("Type: \n" + getType());
         }
+
+        public void setType(string s)
+        {
+            this.type = s;
+        }
+
 
 
     }

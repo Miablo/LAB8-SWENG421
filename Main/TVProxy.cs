@@ -1,41 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Main
 {
-    public class TVProxy : Regular_TV, TV_IF
+    public class TVProxy : AbsTVGlobal
     {
+        Regular_TV tv = new Smart_TV(); // polymorphism
+        TV_IF tif;
 
-        /*
-         * public class ServiceProxy implements ServiceIF {
-            ServiceIF[ ] sifa = new ServiceIF[2];
-            public void doIt( ) {
-          sifa[0] = new Service1( );
-          sifa[1] = new Service2( );
-          for(ServiceIF sif: sifa){
-              sif.doIt( );
-          }
-    } 
-}
-         * 
-         */
-        Regular_TV tv = new Regular_TV();
-        TV_IF[] tif = new TV_IF[8];
-
-        public void getInfo()
+        public TVProxy(int index)
         {
-            tif[0] = new Sony_TV();
-            tif[1] = new Sony_Smart_TV();
-            tif[2] = new Sony_UltraHD_TV();
-            tif[3] = new Vizio_TV();
-            tif[4] = new Vizio_Smart_TV();
-            tif[5] = new Vizio_UltraHD_TV();
+             getObject(index);
+            
+        }
 
+        public void getObject(int index)
+        {
             
 
+            switch (index)
+            {
+                case 0:
+                    tif = new Sony_Smart_TV();
+                    base.setPrice(380);
+                    base.setType("Smart");
+                    Console.WriteLine("Smart Sony!\n");
+                    break;
+                case 1:
+                    tif = new Sony_UltraHD_TV();
+                    base.setPrice(480);
+                    base.setType("Ultra");
+                    Console.WriteLine("Ultra Sony!\n");
+                    break;
+                case 2:
+                    tif = new Vizio_Smart_TV();
+                    base.setPrice(350);
+                    Console.WriteLine("Smart Vizio!\n");
+                    break;
+                case 3:
+                    tif = new Vizio_UltraHD_TV();
+                    base.setPrice(450);
+                    Console.WriteLine("Ultra Vizio!\n");
+                    break;
+                default:
+                    break;
+            }
+
+            tif.getInfo();
+
+           
         }
+
     }
 }

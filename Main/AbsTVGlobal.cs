@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    public class UltraHD_TV : Regular_TV
+    public abstract class AbsTVGlobal : Regular_TV, TV_IF
     {
         
-        public UltraHD_TV()
-        {
-            setPrice(400);
-        }
-
     }
 }

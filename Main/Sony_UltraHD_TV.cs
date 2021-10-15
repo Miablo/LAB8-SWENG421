@@ -8,6 +8,6 @@ namespace Main
 {
     class Sony_UltraHD_TV : Sony_TV, UltraHDIF
     {
-
+        // MSRP 480
     }
 }

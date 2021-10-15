@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Main
 {
@@ -13,6 +9,8 @@ namespace Main
         // The get??? methods include one “~getPrice(): int” to return the MSRP,
         // and a “~getType(): String” method to know the type (Regular, Smart, or UltraHD)
         public void getInfo();
+        public int getPrice();
+        public string getType();
 
 
     }
