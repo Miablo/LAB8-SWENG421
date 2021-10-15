@@ -15,6 +15,15 @@ namespace Main
             return powerWattage;
         }
 
+        public Sony_Smart_TV()
+        {
+            setPrice(380);
+            getBrand();
+            setType("Smart");
+            getPowerUsage();
+        }
+
+
         
     }
 }

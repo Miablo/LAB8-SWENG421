@@ -10,8 +10,14 @@ namespace Main
     {
        
         // MSRP
-        private int price = 200;
-        private string type = "Regular";
+        private int price;
+        private string type = string.Empty;
+
+        public Regular_TV()
+        {
+            this.price = 200;
+            this.type = "Regular";
+        }
  
         // set price
         internal void setPrice(int price)
@@ -31,10 +37,8 @@ namespace Main
 
         public void getInfo()
         {
-            Console.WriteLine("\n");
-            Console.WriteLine("Price: " + getPrice());
-            Console.WriteLine("This is from Regular TV\n");
-            Console.WriteLine("Type: \n" + getType());
+            Console.WriteLine("MSRP: " + getPrice());
+            Console.WriteLine("Type: " + getType());
         }
 
         public void setType(string s)

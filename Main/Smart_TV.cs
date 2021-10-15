@@ -20,6 +20,7 @@ namespace Main
         {
             setPrice(300);
             setType("Smart");
+            Console.WriteLine("Power Usage: " + getPowerUsage());
         }
 
        

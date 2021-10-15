@@ -12,6 +12,7 @@ namespace Main
         public UltraHD_TV()
         {
             setPrice(400);
+            setType("Ultra");
         }
 
     }

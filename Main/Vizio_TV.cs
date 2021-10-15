@@ -6,31 +6,21 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    class Vizio_TV : TV_IF, BrandIF
+    class Vizio_TV : AbsTVGlobal, BrandIF
     {
-      // MSRP 250
+        // MSRP 250
+
+        public Vizio_TV()
+        {
+            setType("Regular");
+            setPrice(250);
+            Console.WriteLine("Brand: " + getBrand());
+        }
      
         public string getBrand()
         {
             return "Vizio";
         }
-
-        public void getInfo()
-        {
-            Console.WriteLine("Brand: " + getBrand());
-            Console.WriteLine("\n");
-            Console.WriteLine("Price: " + getPrice());
-            Console.WriteLine("This is from Vizio TV Regular\n");
-        }
-
-        public int getPrice()
-        {
-            return 250;
-        }
-
-        public string getType()
-        {
-            throw new NotImplementedException();
-        }
+   
     }
 }

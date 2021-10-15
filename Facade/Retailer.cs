@@ -1,7 +1,5 @@
 ﻿using Main;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Facade
 {
@@ -19,68 +17,58 @@ namespace Facade
             //closest too and below
             switch (budget)
             {
-                case >= 400:
-                    // 400 ultra hd
-                    
-                    if(budget <= 450)
+                case >= 400:  
+                    if(budget <= 450 && budget > 400)
                     {
-                        // vizio 450
+                        // vizio ultra 450
+                        tv = new TVProxy(3);
+                    } else if(budget <= 480 && budget > 450)
+                    {
+                        // sony ultra 480
                         tv = new TVProxy(1);
-                    } else if(budget <= 480)
-                    {
-                        // sony 480
-                        tv = new TVProxy(0);
                     } else
                     {
+                        // 400 ultra hd
                         tv = new UltraHD_TV();
-                        Console.WriteLine("Object is Ultra\n");     
+                        tv.getInfo();  
                     }
 
                     break;
                 case >= 300:
-                    if (budget <= 350)
+                    if (budget <= 350 && budget > 300)
                     {
-                        // vizio 350
-
-                        tv = new TVProxy(1);
-                    }
-                    else if (budget <= 380)
-                    {
-                        // sony 380
+                        // vizio smart 350
                         tv = new TVProxy(2);
+                    }
+                    else if (budget <= 380 && budget > 350)
+                    {
+                        // sony smart 380
+                        tv = new TVProxy(0);
                     }
                     else
                     {
                         // 300 smart
                         tv = new Smart_TV();
-                        Console.WriteLine("Object is smart\n");
-                        tv.getPrice();
-                        //tv.getInfo();
+                        tv.getInfo();
                     }
                     break;
                 case >= 200:
 
-                    // sony 280
-                    tv = new Regular_TV();
-                    Console.WriteLine("Object is regular\n");
-
-                    if (budget <= 250)
+                    if (budget <= 250 && budget > 200)
                     {
-                        // vizio 250
-                        tv = new TVProxy(1);
+                        // vizio regular 250
+                        tv = new TVProxy(4);
                     }
-                    else if (budget <= 280)
+                    else if (budget <= 280 && budget > 250)
                     {
-                        // sony 280
-                        tv = new TVProxy(3);
+                        // sony regular 280
+                        tv = new TVProxy(5);
                     }
                     else
                     {
                         // 200 regular
                         tv = new Regular_TV();
-                        Console.WriteLine("Object is regular\n");
-                        tv.getPrice();
-                        //tv.getInfo();
+                        tv.getInfo();
                     }
 
                     break;
