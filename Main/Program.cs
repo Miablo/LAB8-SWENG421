@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace Main
+﻿namespace Main
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //not used
         }
     }
 }
